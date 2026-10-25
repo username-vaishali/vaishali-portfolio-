@@ -194,7 +194,12 @@ footer {
     box-shadow: 0 4px 15px #00000012;
     text-align: left;
     transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
 }
+
 
 .project-card:hover {
     transform: translateY(-8px);

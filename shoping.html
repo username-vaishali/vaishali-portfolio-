@@ -1,0 +1,185 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishali's Shopping Store</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background: #6c3ce9;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #4820b5;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 25px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+
+        .product .emoji {
+            font-size: 65px;
+            margin: 15px;
+        }
+
+        .product h3 {
+            margin: 10px;
+        }
+
+        .product p {
+            color: #6c3ce9;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        button {
+            background: #6c3ce9;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4820b5;
+        }
+
+        #cart {
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🛍️ Vaishali's Shopping Store</h1>
+        <p>Shop your favourite products!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#cart">My Cart</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Our Store ❤️</h2>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+
+        <div class="products">
+
+            <div class="product">
+                <div class="emoji">👕</div>
+                <h3>T-Shirt</h3>
+                <p>₹499</p>
+                <button onclick="addToCart(499)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <div class="emoji">👟</div>
+                <h3>Shoes</h3>
+                <p>₹999</p>
+                <button onclick="addToCart(999)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <div class="emoji">👜</div>
+                <h3>Handbag</h3>
+                <p>₹799</p>
+                <button onclick="addToCart(799)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <div class="emoji">⌚</div>
+                <h3>Watch</h3>
+                <p>₹1,299</p>
+                <button onclick="addToCart(1299)">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="cart">
+        🛒 Cart Items: <span id="count">0</span>
+        <br><br>
+        Total: ₹<span id="total">0</span>
+    </section>
+
+    <footer>
+        <p>Created by Vaishali | My Shopping Website</p>
+    </footer>
+
+    <script>
+        let count = 0;
+        let total = 0;
+
+        function addToCart(price) {
+            count++;
+            total += price;
+
+            document.getElementById("count").textContent = count;
+            document.getElementById("total").textContent = total;
+
+            alert("Product added to cart!");
+        }
+    </script>
+
+</body>
+</html>
+```

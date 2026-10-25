@@ -187,6 +187,16 @@
 
             alert("Product added to cart!");
         }
+        function searchProducts() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let products = document.querySelectorAll(".product");
+
+    products.forEach(function(product) {
+        let name = product.querySelector("h3").textContent.toLowerCase();
+
+        product.style.display = name.includes(input) ? "block" : "none";
+    });
+}
     </script>
 
 </body>
